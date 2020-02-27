@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+	<link href="Style.css" rel="stylesheet">
+    <title>Avtar Teller</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+		<h1>What does you name say about your Personality?</h1>
+            <div class="userinput">
+                <label for="user">Enter Your Name</label>
+                <input type="text" name="" id="user"></div>
+            <div class="imgdiv">
+                <img src="avatar.png" alt="" id="avtar">
+            </div>
+            <div class="submitbtn">
+                <button onclick="show()">Check</button>
+            </div>
+        </div>
+    </div>
+<script>
+  function show(){
+  var input = document.getElementById('user').value;
+  if(input==""){
+	alert("Please enter a Name");
+  }
+  //API source ->https://joeschmoe.io/
+  document.getElementById('avtar').setAttribute("src","https://joeschmoe.io/api/v1/"+input+"");//change the img src
+}
+</script>
+</body>
+</html>

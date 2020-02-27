@@ -1,0 +1,102 @@
+*{
+    box-izing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-image:url("bg.png");
+    background-size:cover;
+    background-repeat:no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	padding:40px;
+}
+.container h1{
+    background: -webkit-linear-gradient(128deg,#ff2ced,#ff8e47);
+    -webkit-background-clip: text;/*Clip the background gradient to text*/
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+    font-family: Audiowide;
+    margin-bottom:10px;
+	text-align:center;
+}
+.box{
+    padding:20px 40px;
+    background-image:linear-gradient(125deg, #fff6bb,#ffb8e9,#97ffbb);
+     box-shadow: 0 0 2px rgba(255,255,255,.1),0 0 3px rgba(255,255,255,.2),0 0 4px rgba(255,255,255,.3),0 0 5px rgba(0,0,0,.2);
+}
+.userinput{
+    display: flex;
+    flex-direction: column;
+}
+.userinput label{
+    background: -webkit-linear-gradient(85deg,#ee64f6,#ff9494);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-self: center;
+    font-size:1.7em;
+    font-family: Audiowide;
+    margin-bottom: 8px;
+}
+.userinput input{
+    align-self: center;
+    width:200px;
+    border: 1px solid #e0b;
+    padding:10px 12px; 
+    font-size: 1em;
+    color:#610bf6;
+    background: linear-gradient(90deg, #fed9ff,#fbf3e8);
+    text-transform: uppercase;
+    text-align: center;
+}
+.userinput input:focus , .submitbtn button:focus{
+    outline:none;
+}
+.imgdiv{
+    display: flex;
+    justify-content: center;
+    margin:10px auto;
+}
+.imgdiv img{
+    width:200px;
+    height:200px;
+}
+.submitbtn{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+}
+.submitbtn button{
+    font-family: Audiowide;
+    border:none;
+    padding:10px 12px;
+    font-size: 1em;
+    cursor: pointer;
+    background: linear-gradient(45deg,#ff2ced,#ff8e47);
+    color:#fff5f4;
+    width:200px;
+}
+.submitbtn button:hover{
+    opacity: .8;
+    box-shadow: 0 0 2px rgba(0,0,0,.1), 0 0 3px rgba(0,0,0,.1), 0 0 4px rgba(0,0,0,.1), 0 0 4px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1);
+}
+.submitbtn button:focus{
+    background: linear-gradient(90deg,#ff8e47,#ff2ced); 
+}
+/* For mobile Screens */
+@media only screen and (max-width: 600px){
+ .container h1{
+    font-size:1em;
+	}
+    .userinput label{
+        font-size: .9em;
+    }
+    .imgdiv img, .submitbtn button{
+        width:100px;
+    }
+    .imgdiv img{
+        height:100px;
+    }
+}
